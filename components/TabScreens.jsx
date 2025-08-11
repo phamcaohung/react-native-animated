@@ -15,7 +15,7 @@ const TabScreens = () => {
         <Tab.Navigator screenOptions={{ headerShown: false }} style={styles.container}>
             <Tab.Screen
                 name='Fisrt Animation'
-                component={Animation}
+                component={AnimationSecond}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <MaterialIcons 
@@ -33,7 +33,7 @@ const TabScreens = () => {
             />
             <Tab.Screen
                 name='Second Animation'
-                component={AnimationSecond}
+                component={Animation}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <MaterialCommunityIcons 

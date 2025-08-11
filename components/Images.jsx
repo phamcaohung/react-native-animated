@@ -1,4 +1,4 @@
-import { Dimensions, Image, StyleSheet, View } from "react-native"
+import { Dimensions, Image, StyleSheet } from "react-native"
 import Animated from "react-native-reanimated"
 
 

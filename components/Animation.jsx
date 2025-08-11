@@ -6,7 +6,6 @@ import { useState } from "react"
 import { Stagger } from '@animatereactnative/stagger'
 
 
-
 const images = [
     { name: "Radiant Serpent Sett", image: require("../assets/bg_image_1.jpg"), desc: "A descendant of the Ivory Serpent spirit, Sett is an action movie star who uses his ancestral gifts to wow audiences and give his Ma the good life she deserves. When his hometown is threatened by a crime syndicate, it's time for Sett to play the hero in real life, too—but will his story star a fame-seeking hotshot, or a humble protector?"},
     { name: "Arcane Fractured Jinx", image: require("../assets/bg_image_2.jpg"), desc: "Inventor, maniac, hero—Jinx left the twin cities reeling after killing Silco and blowing up the Piltover Council. Her future had gone up in flames, and as she faced the pieces of her fractured life, Jinx did the same. Now a symbol of change, she must decide who she will become in a world shaped by her own chaos."},
@@ -33,7 +32,7 @@ const Animation = () => {
             const floatIndex = ((offset.value + width / 2) / itemSize) % images.length
             return Math.abs(Math.floor(floatIndex))
         }, (value) => {
-            console.log(value);
+            //console.log(value);
             runOnJS(setActiveIndex)(value)
         }
     )
@@ -69,9 +68,6 @@ const Animation = () => {
                         <Images 
                             key={index}
                             image={item.image}
-                            index={index}
-                            offset={offset}
-                            length={images.length}
                         />
                     ))}
                 </Animated.View>
