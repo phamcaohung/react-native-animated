@@ -4,6 +4,7 @@ import { StyleSheet, Text } from 'react-native';
 import Animation from './Animation';
 import AnimationSecond from './AnimationSecond';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import BaseAnimation from './BaseAnimation';
 
 
 const Tab = createBottomTabNavigator();
@@ -13,6 +14,24 @@ const TabScreens = () => {
 
     return (
         <Tab.Navigator screenOptions={{ headerShown: false }} style={styles.container}>
+            <Tab.Screen
+                name='Base Animation'
+                component={BaseAnimation}
+                options={{
+                    tabBarIcon: ({ focused }) => (
+                        <MaterialIcons 
+                            name='android'
+                            size={24} 
+                            style={getStyle(focused)}
+                        />
+                    ),
+                    tabBarLabel: ({ focused }) => (
+                        <Text style={[styles.text, getStyle(focused)]}>
+                            Fisrt Animation
+                        </Text>
+                    )
+                }}
+            />
             <Tab.Screen
                 name='Fisrt Animation'
                 component={AnimationSecond}
